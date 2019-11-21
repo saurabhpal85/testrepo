@@ -1,20 +1,22 @@
 package practice;
 
 import java.lang.reflect.Method;
+import java.util.Scanner;
 import java.util.Stack;
 
 public class BalancedParanthesis {
 
 	public static void main(String[] args) {
-		if(BalancedParanthesis.isBalancedParan("[[{{()}}]]")) {
+		
+		System.out.println("Ener the Parantheses String");
+		Scanner scanner = new Scanner(System.in);
+		String paran = scanner.next();
+		
+		if(BalancedParanthesis.isBalancedParan(paran)) {
 			
 			System.out.println("Balanced");
 		}else {
 			System.out.println("Not Balanced");
-		}
-		Method[] methods = BalancedParanthesis.class.getMethods();
-		for(Method method : methods){
-		    System.out.println("method = " + method.getName());
 		}
 		
 	}
